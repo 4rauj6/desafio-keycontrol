@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(70, 26, 114);
+}
+  
+.homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title-homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+}
+
+.homepage-img{
+    width: 50%;
+}
+
+.homepage-img img{
+    display: block;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    margin-left: 300px;
+}
+
+.title-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    padding: 30px 90px;
+    height: 100vh;
+    border-radius: 200px 0 0 200px;
+}
+
+.title-content h1 {
+    font-family: 'Cabin';
+    font-size: 4em;
+}
+
+.title-content h3 {
+    font-family: 'Cabin';
+    font-size: 1.5em;
+}
+
+.title-content span{
+    font-family: 'Lato';
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.title-content button {
+    background-color: transparent;
+    border: purple solid 2px;
+    width: 40%;
+    height: 5vh;
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: purple;
+    font-family: 'Cabin';
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.title-content button:hover{
+    background-color: purple;
+    color: white;
+}
+  
+.sign-credantials{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: purple;
+}
+  
+.itens-list{
+    display: none;
+}
+
+#credantials-form{
+    background-color: white;
+    width: 40%;
+    height: 80vh;
+    padding: 90px;
+}
+
+
+.form-label-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Cabin';
+    gap: 10px;
+}
+
+.form-title p {
+    font-size: 1.1em;
+    width: 80%;
+    text-align: center;
+}
+
+.form-label-input label,
+.form-label-input span{
+    font-family: 'Cabin';
+    font-size: 1em;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.form-label-input input,
+.form-label-input select{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #d7b6f7;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Lato';
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-label-input input:focus,
+.form-label-input select:focus{
+    border-color: purple;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.2);
+    background-color: white;
+}
+
+.form-label-input input::placeholder{
+    color: #888;
+}
+
+
+.form-label-input input[type="radio"]{
+    width: auto;
+    margin-top: 10px;
+    accent-color: purple;
+    cursor: pointer;
+}
+
+.form-label-input label[for="matituno"],
+.form-label-input label[for="vespertino"],
+.form-label-input label[for="noturno"]{
+    align-self: flex-start;
+    margin-left: 25px;
+    margin-top: -22px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.form-label-input button{
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border: solid 2px purple;
+    border-radius: 12px;
+    background-color: transparent;
+    color: purple;
+    font-family: 'Cabin';
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-label-input button:hover{
+    background-color: purple;
+    color: white;
+}
+
+#credantials-form{
+    background-color: white;
+    width: 45%;
+    min-height: 85vh;
+    padding: 90px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.itens-list{
+    display: none;
+    width: 100%;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.itens-table{
+    width: 100%;
+    overflow-x: auto;
+}
+
+#table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    font-family: 'Lato';
+}
+
+#table thead{
+    background-color: purple;
+    color: white;
+}
+
+#table thead th{
+    padding: 18px;
+    font-size: 1em;
+    font-family: 'Cabin';
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#table tbody td{
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 0.95em;
+}
+
+#table tbody tr{
+    transition: all 0.2s ease-in-out;
+}
+
+#table tbody tr:hover{
+    background-color: #f5ebff;
+}
+
+#table tbody tr:nth-child(even){
+    background-color: #faf7fd;
+}
+
+#table button{
+    border: none;
+    background-color: transparent;
+    color: purple;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: solid 2px purple;
+    cursor: pointer;
+    font-family: 'Cabin';
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+#table button:hover{
+    background-color: purple;
+    color: white;
+}
+
+.no-message-alert td{
+    padding: 30px;
+    font-family: 'Cabin';
+    font-size: 1.1em;
+    color: purple;
+    text-align: center;
+}
