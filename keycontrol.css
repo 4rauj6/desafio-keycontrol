@@ -303,7 +303,14 @@ body {
 
 @media (max-width: 680px) {
 
-    .homepage { display: none; }
+    .homepage {
+        display: none;
+    }
+
+    .sign-credantials {
+        padding: 10px;
+        height: auto;
+    }
 
     .title-hp-mobile {
         display: flex;
@@ -373,44 +380,42 @@ body {
     }
 
     #credantials-form {
-        width: 90%;
-        min-height: 1vh;
-        gap: 30px;
-        overflow-y: hidden;
-        overflow-x: hidden;
+        width: 95%;
+        max-width: 420px;
+        padding: 30px 20px;
+
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        overflow-y: auto;
+    }
+
+    .form-label-input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .form-label-input input,
+    .form-label-input select {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
     }
 
     .form-title h1 {
-        font-size: 2em;
-        width: 100%;
-        display: flex;
+        font-size: 1.8em;
         text-align: center;
-        justify-content: center;
-        align-items: center;
+        margin-top: 70px;
     }
 
     .form-title p {
-        font-size: 1.2em;
         width: 100%;
-    }
-
-    .form-label-input label,
-    .form-label-input span {
-        font-family: 'Cabin';
-        width: 80%;
-        font-size: 1em;
-        font-weight: 600;
-        align-self: flex-start;
-        margin-top: 10px;
-    }
-
-    .form-label-input input {
-        width: 100%;
-    }
-
-    .form-label-input input[type="radio"] {
-        margin-left: 0;
-        margin-right: 0px;
+        text-align: center;
     }
 
     .itens-list {

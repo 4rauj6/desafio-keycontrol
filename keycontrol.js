@@ -30,9 +30,9 @@ function saveForm(event) {
 
     if (!responsavelInput || !setorInput || !roomInput || !workPeriods || !time1 || !time2) {
         Swal.fire({
-          title: 'Ouve um erro',
-          text: 'Por favor preencha todos os campo do formulário corretamente',
-          icon: 'error'
+            title: 'Ouve um erro',
+            text: 'Por favor preencha todos os campo do formulário corretamente',
+            icon: 'error'
         });
 
         return;
@@ -88,11 +88,11 @@ function saveForm(event) {
     });
 
     refrash.appendChild(deleteItensFromList);
-    
+
     Swal.fire({
-      title: 'Informações salvas com sucesso!',
-      text: 'As informações foram salvas com sucesso. A tabela já está atualizada!',
-      icon: 'success'
+        title: 'Informações salvas com sucesso!',
+        text: 'As informações foram salvas com sucesso. A tabela já está atualizada!',
+        icon: 'success'
     })
     document.querySelector('form').reset();
 }
