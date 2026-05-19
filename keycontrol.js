@@ -29,7 +29,11 @@ function saveForm(event) {
     const table = document.getElementById('table').getElementsByTagName('tbody')[0];
 
     if (!responsavelInput || !setorInput || !roomInput || !workPeriods || !time1 || !time2) {
-        alert('Preencha toda a tabela corretamente');
+        Swal.fire({
+          title: 'Ouve um erro',
+          text: 'Por favor preencha todos os campo do formulário corretamente',
+          icon: 'error'
+        });
 
         return;
     }
@@ -63,7 +67,6 @@ function saveForm(event) {
     deleteItensFromList.innerText = 'Remover';
 
     deleteItensFromList.addEventListener('click', function () {
-
         const confirmDelete = confirm('Você realmente deseja apagar esse item?');
 
         if (!confirmDelete) {
@@ -85,8 +88,12 @@ function saveForm(event) {
     });
 
     refrash.appendChild(deleteItensFromList);
-
-    alert('Os dados foram cadastrados e salvos com sucesso!');
+    
+    Swal.fire({
+      title: 'Informações salvas com sucesso!',
+      text: 'As informações foram salvas com sucesso. A tabela já está atualizada!',
+      icon: 'success'
+    })
     document.querySelector('form').reset();
 }
 

@@ -374,14 +374,15 @@ body {
 
     #credantials-form {
         width: 90%;
+        min-height: 1vh;
         gap: 30px;
         overflow-y: hidden;
         overflow-x: hidden;
     }
 
     .form-title h1 {
-        font-size: 1.4em;
-        width: 200%;
+        font-size: 2em;
+        width: 100%;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -389,14 +390,14 @@ body {
     }
 
     .form-title p {
-        font-size: 1em;
-        width: 150%;
+        font-size: 1.2em;
+        width: 100%;
     }
 
     .form-label-input label,
     .form-label-input span {
         font-family: 'Cabin';
-        width: 100%;
+        width: 80%;
         font-size: 1em;
         font-weight: 600;
         align-self: flex-start;
@@ -404,12 +405,12 @@ body {
     }
 
     .form-label-input input {
-        width: 150%;
+        width: 100%;
     }
 
     .form-label-input input[type="radio"] {
         margin-left: 0;
-        margin-right: -20px;
+        margin-right: 0px;
     }
 
     .itens-list {
