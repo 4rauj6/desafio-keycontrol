@@ -4,19 +4,25 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(70, 26, 114);
 }
-  
-.homepage{
+
+.mobile-homepage {
+    display: none;
+}
+
+.homepage {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.title-homepage{
+.title-homepage {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +31,11 @@ body{
     gap: 200px;
 }
 
-.homepage-img{
+.homepage-img {
     width: 50%;
 }
 
-.homepage-img img{
+.homepage-img img {
     display: block;
     align-items: center;
     width: 70%;
@@ -37,7 +43,7 @@ body{
     margin-left: 300px;
 }
 
-.title-content{
+.title-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +66,7 @@ body{
     font-size: 1.5em;
 }
 
-.title-content span{
+.title-content span {
     font-family: 'Lato';
     font-size: 1.2em;
     text-align: center;
@@ -79,24 +85,24 @@ body{
     transition: all 0.2s ease-in-out;
 }
 
-.title-content button:hover{
+.title-content button:hover {
     background-color: purple;
     color: white;
 }
-  
-.sign-credantials{
+
+.sign-credantials {
     display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
     color: purple;
 }
-  
-.itens-list{
+
+.itens-list {
     display: none;
 }
 
-#credantials-form{
+#credantials-form {
     background-color: white;
     width: 40%;
     height: 80vh;
@@ -127,7 +133,7 @@ body{
 }
 
 .form-label-input label,
-.form-label-input span{
+.form-label-input span {
     font-family: 'Cabin';
     font-size: 1em;
     font-weight: 600;
@@ -136,7 +142,7 @@ body{
 }
 
 .form-label-input input,
-.form-label-input select{
+.form-label-input select {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #d7b6f7;
@@ -149,19 +155,20 @@ body{
 }
 
 .form-label-input input:focus,
-.form-label-input select:focus{
+.form-label-input select:focus {
     border-color: purple;
     box-shadow: 0 0 10px rgba(128, 0, 128, 0.2);
     background-color: white;
 }
 
-.form-label-input input::placeholder{
+.form-label-input input::placeholder {
     color: #888;
 }
 
 
-.form-label-input input[type="radio"]{
+.form-label-input input[type="radio"] {
     width: auto;
+    margin-right: 60%;
     margin-top: 10px;
     accent-color: purple;
     cursor: pointer;
@@ -169,16 +176,16 @@ body{
 
 .form-label-input label[for="matituno"],
 .form-label-input label[for="vespertino"],
-.form-label-input label[for="noturno"]{
+.form-label-input label[for="noturno"] {
     align-self: flex-start;
     margin-left: 25px;
-    margin-top: -22px;
+    margin-top: -20px;
     margin-bottom: 5px;
     font-weight: 400;
     cursor: pointer;
 }
 
-.form-label-input button{
+.form-label-input button {
     width: 100%;
     padding: 15px;
     margin-top: 25px;
@@ -193,52 +200,54 @@ body{
     transition: all 0.3s ease;
 }
 
-.form-label-input button:hover{
+.form-label-input button:hover {
     background-color: purple;
     color: white;
 }
 
-#credantials-form{
+#credantials-form {
     background-color: white;
     width: 45%;
     min-height: 85vh;
     padding: 90px;
     border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow-y: auto;
 }
 
-.itens-list{
+.itens-list {
     display: none;
     width: 100%;
     padding: 40px;
     margin-top: 20px;
 }
 
-.itens-table{
+.itens-table {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-#table{
+#table {
     width: 100%;
+    min-width: 700px;
     border-collapse: collapse;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     font-family: 'Lato';
 }
 
-#table thead{
+#table thead {
     background-color: purple;
     color: white;
 }
 
-#table thead th{
+#table thead th {
     padding: 18px;
     font-size: 1em;
     font-family: 'Cabin';
@@ -246,7 +255,7 @@ body{
     text-transform: uppercase;
 }
 
-#table tbody td{
+#table tbody td {
     padding: 16px;
     text-align: center;
     border-bottom: 1px solid #eee;
@@ -254,19 +263,19 @@ body{
     font-size: 0.95em;
 }
 
-#table tbody tr{
+#table tbody tr {
     transition: all 0.2s ease-in-out;
 }
 
-#table tbody tr:hover{
+#table tbody tr:hover {
     background-color: #f5ebff;
 }
 
-#table tbody tr:nth-child(even){
+#table tbody tr:nth-child(even) {
     background-color: #faf7fd;
 }
 
-#table button{
+#table button {
     border: none;
     background-color: transparent;
     color: purple;
@@ -279,15 +288,156 @@ body{
     transition: all 0.3s ease;
 }
 
-#table button:hover{
+#table button:hover {
     background-color: purple;
     color: white;
 }
 
-.no-message-alert td{
+.no-message-alert td {
     padding: 30px;
     font-family: 'Cabin';
     font-size: 1.1em;
     color: purple;
     text-align: center;
+}
+
+@media (max-width: 680px) {
+
+    .homepage { display: none; }
+
+    .title-hp-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-homepage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .mobile-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1.1rem;
+        color: purple;
+        font-family: 'Cabin';
+        background-color: rgb(255, 255, 255);
+        padding: 70px 20px;
+        border-radius: 30px;
+    }
+
+    .mobile-content span {
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+        color: purple
+    }
+
+    .mobile-content button {
+        margin-top: auto;
+        padding: 12px 30px;
+        width: 80%;
+        border-radius: 20px;
+        background: transparent;
+        color: purple;
+        border: solid 2px purple;
+        font-size: 1.1em;
+        font-family: 'Cabin';
+        gap: 100px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .mobile-content button:hover {
+        background-color: purple;
+        color: rgb(255, 255, 255);
+    }
+
+    .mobile-img {
+        margin-bottom: 60px;
+    }
+
+    .mobile-img img {
+        width: 40%;
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+        height: auto;
+    }
+
+    #credantials-form {
+        width: 90%;
+        gap: 30px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .form-title h1 {
+        font-size: 1.4em;
+        width: 200%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-title p {
+        font-size: 1em;
+        width: 150%;
+    }
+
+    .form-label-input label,
+    .form-label-input span {
+        font-family: 'Cabin';
+        width: 100%;
+        font-size: 1em;
+        font-weight: 600;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .form-label-input input {
+        width: 150%;
+    }
+
+    .form-label-input input[type="radio"] {
+        margin-left: 0;
+        margin-right: -20px;
+    }
+
+    .itens-list {
+        padding: 10px;
+    }
+
+    .itens-table {
+        overflow-x: auto;
+    }
+
+    #table {
+        min-width: 100px;
+        white-space: wrap;
+    }
+
+    #table thead th {
+        padding: 10px;
+        font-size: 0.75em;
+    }
+
+    #table tbody td {
+        padding: 8px;
+        font-size: 0.75em;
+    }
+
+    #table button {
+        padding: 5px 8px;
+        font-size: 0.7em;
+    }
+
 }

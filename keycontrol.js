@@ -1,16 +1,19 @@
-function goToMainMenu(){
+function goToMainMenu() {
     const homepage = document.querySelector('.homepage');
+    const mobileHome = document.querySelector('.mobile-homepage');
     const mainFormPage = document.querySelector('.sign-credantials');
     const formTable = document.querySelector('.itens-list');
-    
-    if(homepage.style.display === '' || homepage.style.display === 'flex'){
+
+    if (homepage.style.display === '' || homepage.style.display === 'flex' || mobileHome === '') {
         homepage.style.display = 'none';
         mainFormPage.style.display = 'flex';
         formTable.style.display = 'block';
+        mobileHome.style.display = 'none'
     } else {
         homepage.style.display = 'flex';
         mainFormPage.style.display = 'none';
         formTable.style.display = 'none';
+        mobileHome.style.display = 'flex'
     }
 }
 
@@ -25,7 +28,7 @@ function saveForm(event) {
     const time2 = document.getElementById('timer2').value;
     const table = document.getElementById('table').getElementsByTagName('tbody')[0];
 
-    if(!responsavelInput || !setorInput || !roomInput || !workPeriods || !time1 || !time2){
+    if (!responsavelInput || !setorInput || !roomInput || !workPeriods || !time1 || !time2) {
         alert('Preencha toda a tabela corretamente');
 
         return;
@@ -54,21 +57,28 @@ function saveForm(event) {
     listSaved.push(listCall);
 
     localStorage.setItem('keyControlDatas', JSON.stringify(listSaved));
-    
+
     const refrash = tableNewLine.insertCell(6);
     const deleteItensFromList = document.createElement('button');
     deleteItensFromList.innerText = 'Remover';
 
     deleteItensFromList.addEventListener('click', function () {
+
+        const confirmDelete = confirm('Você realmente deseja apagar esse item?');
+
+        if (!confirmDelete) {
+            return;
+        }
+
         tableNewLine.remove();
 
         const currentSavedList = JSON.parse(localStorage.getItem('keyControlDatas')) || [];
 
-        const updatedList = currentSavedList.filter(item => 
+        const updatedList = currentSavedList.filter(item =>
             !(
-                item.owner === listCall.owner && 
+                item.owner === listCall.owner &&
                 item.timeGo === listCall.timeGo &&
-                item.timeBack === listCall.timeBack && 
+                item.timeBack === listCall.timeBack &&
                 item.room === listCall.room)
         );
         localStorage.setItem('keyControlDatas', JSON.stringify(updatedList));
@@ -85,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tableToLoad = document.getElementById('table').getElementsByTagName('tbody')[0];
 
     function isListEmpty() {
-        if(tableToLoad.rows.length === 0) {
+        if (tableToLoad.rows.length === 0) {
             const noDataMessage = tableToLoad.insertRow();
             noDataMessage.className = 'no-message-alert';
 
@@ -99,30 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if(savedCredantials.length > 0) {
+    if (savedCredantials.length > 0) {
         savedCredantials.forEach((credantials, index) => {
             const allNewTable = tableToLoad.insertRow();
-    
+
             allNewTable.insertCell(0).textContent = credantials.owner;
             allNewTable.insertCell(1).textContent = credantials.sector;
             allNewTable.insertCell(2).textContent = credantials.room;
             allNewTable.insertCell(3).textContent = credantials.workTime;
             allNewTable.insertCell(4).textContent = credantials.timeGo;
             allNewTable.insertCell(5).textContent = credantials.timeBack;
-    
+
             const refrash = allNewTable.insertCell(6);
             const deleteItensFromList = document.createElement('button');
             deleteItensFromList.innerText = 'Remover';
-    
+
             deleteItensFromList.addEventListener('click', function () {
                 allNewTable.remove();
-    
+
                 const currentSavedList = JSON.parse(localStorage.getItem('keyControlDatas')) || [];
                 currentSavedList.splice(index, 1);
                 localStorage.setItem('keyControlDatas', JSON.stringify(currentSavedList));
 
                 isListEmpty();
-                
+
             });
             refrash.appendChild(deleteItensFromList);
         });

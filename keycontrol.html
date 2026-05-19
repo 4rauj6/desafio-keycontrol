@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="keycontrol.js" defer></script>
     <link rel="stylesheet" href="keycontrol.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
     <title>Key control - Atividade (João Victor Araújo de Sousa)</title>
 </head>
+
 <body>
     <section class="homepage">
         <div class="title-homepage">
@@ -29,52 +33,69 @@
         </div>
     </section>
 
+    <section class="mobile-homepage">
+        <div class="title-hp-mobile">
+            <div class="mobile-img">
+                <img src="https://cdn-icons-png.flaticon.com/512/4001/4001033.png" alt="">
+            </div>
+            <div class="mobile-content">
+                <h1>LogiTech S.A</h1>
+                <h3>Key control management App</h3>
+                <span>Controle, organize e mantenha a entrada e saídas de chaves de forma eficiênte</span>
+                <button onclick="goToMainMenu()">Entrar
+                    <i class="fa fa-start"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <section class="sign-credantials">
-            <form action="#" id="credantials-form">
-                <div class="form-title">
-                    <h1>Cadastro de credenciais</h1>
-                    <p>Informe os dados dos funcionários que terão acesso as chaves. É de suma importancia que você se atente na hora de preencher o formulário para não errar.</p>
-                </div>
+        <form action="#" id="credantials-form">
+            <div class="form-title">
+                <h1>Cadastro de credenciais</h1>
+                <p>Informe os dados dos funcionários que terão acesso as chaves. É de suma importancia que você se
+                    atente na hora de preencher o formulário para não errar.</p>
+            </div>
 
-                <div class="form-label-input">
-                    <label for="actual-owner">Responsável:</label>
-                    <input type="text" id="actual-owner" name="actual-owner" placeholder="Nome do(a) responsável">
-                    
-                    <label for="sector">Setor:</label>
-                    <select id="sector" name="sector">
-                        <option value="ti">T.I</option>
-                        <option value="finance">Financeiro</option>
-                        <option value="production">Produção</option>
-                        <option value="rh">R.H</option>
-                    </select>
+            <div class="form-label-input">
+                <label for="actual-owner">Responsável:</label>
+                <input type="text" id="actual-owner" name="actual-owner" placeholder="Nome do(a) responsável">
 
-                    <label for="room">Sala:</label>
-                    <select name="room" id="room">
-                        <option value="lab1">Lab. 1</option>
-                        <option value="lab2">Lab. 2</option>
-                        <option value="rh-room">Sala R.H</option>
-                        <option value="reunion">Sala de reuniões</option>
-                        <option value="operations">Sala de operações</option>
-                    </select>
+                <label for="sector">Setor:</label>
+                <select id="sector" name="sector">
+                    <option value="ti">T.I</option>
+                    <option value="finance">Financeiro</option>
+                    <option value="production">Produção</option>
+                    <option value="rh">R.H</option>
+                </select>
 
-                    <span>Turno:</span>
-                    <input type="radio" name="work-periods" id="matituno" value="matutino">
-                    <label for="matituno">Matituno</label>
+                <label for="room">Sala:</label>
+                <select name="room" id="room">
+                    <option value="lab1">Lab. 1</option>
+                    <option value="lab2">Lab. 2</option>
+                    <option value="rh-room">Sala R.H</option>
+                    <option value="reunion">Sala de reuniões</option>
+                    <option value="operations">Sala de operações</option>
+                </select>
 
-                    <input type="radio" name="work-periods" id="vespertino" value="vespertino">
-                    <label for="vespertino">Vespertino</label>
+                <span>Turno:</span>
+                <input type="radio" name="work-periods" id="matituno" value="matutino">
+                <label for="matituno">Matituno</label>
 
-                    <input type="radio" name="work-periods" id="noturno" value="noturno">
-                    <label for="noturno">Noturno</label>
+                <input type="radio" name="work-periods" id="vespertino" value="vespertino">
+                <label for="vespertino">Vespertino</label>
 
-                    <label for="timer">Horário de retirada:</label>
-                    <input type="time" name="timer" id="timer">
-                    <label for="timer2">Horário de entrega:</label>
-                    <input type="time" name="timer2" id="timer2">
+                <input type="radio" name="work-periods" id="noturno" value="noturno">
+                <label for="noturno">Noturno</label>
 
-                    <button type="submit" onclick="saveForm(event)">Salvar informações</button>
-                </div>
-            </form>
+                <label for="timer">Horário de retirada:</label>
+                <input type="time" name="timer" id="timer">
+                <label for="timer2">Horário de entrega:</label>
+                <input type="time" name="timer2" id="timer2">
+
+                <button type="submit" onclick="saveForm(event)">Salvar informações</button>
+            </div>
+        </form>
     </section>
 
     <section class="itens-list">
@@ -92,10 +113,11 @@
                 </thead>
 
                 <tbody>
-                    
+
                 </tbody>
             </table>
         </div>
     </section>
 </body>
+
 </html>
