@@ -418,6 +418,10 @@ body {
         text-align: center;
     }
 
+    input[type="radio"] {
+        margin-left: 90px;
+    }
+
     .itens-list {
         padding: 10px;
     }
